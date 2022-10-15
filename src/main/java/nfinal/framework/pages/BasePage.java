@@ -3,9 +3,7 @@ package nfinal.framework.pages;
 import nfinal.framework.managers.DriverManager;
 import nfinal.framework.managers.PageManager;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
@@ -17,14 +15,5 @@ public class BasePage {
 
     public BasePage() {
         PageFactory.initElements(driverManager.getDriver(), this);
-    }
-
-    protected WebElement waitUtilElementToBeClickable(WebElement element) {
-        return wait.until(ExpectedConditions.elementToBeClickable(element));
-    }
-
-    protected void fillInputField(WebElement field, String value) {
-        waitUtilElementToBeClickable(field).click();
-        field.sendKeys(value);
     }
 }
