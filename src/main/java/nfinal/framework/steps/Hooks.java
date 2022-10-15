@@ -18,8 +18,8 @@ public class Hooks {
         driverManager.getDriver().get(propManager.getProperty(PropsConsts.BASE_URL));
     }
 
-    @After
-    public void after() {
-        InitManager.quitFramework();
-    }
+//    @After
+//    public void after() {
+//        InitManager.quitFramework();
+//    }
 }
